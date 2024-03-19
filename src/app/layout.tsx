@@ -15,8 +15,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="border border-2 border-green-500">
+      <body className={inter.className} >
+      <h2 className="border border-2 border-red-500">Nav Item</h2>
+        {children}             {/* children comming from current route(folder) i.e if current route is '/chai' then its content(layout,page) get painted here*/}
+      </body>
     </html>
   );
 }
