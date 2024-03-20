@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,9 +16,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="border border-2 border-green-500">
+    <html lang="en" className="dark">
       <body className={inter.className} >
-      <h2 className="border border-2 border-red-500">Nav Item</h2>
+
+        <div className="relative w-full flex items-center justify-center border border-white">
+          <Navbar/>
+        </div>
+
         {children}             {/* children comming from current route(folder) i.e if current route is '/chai' then its content(layout,page) get painted here*/}
       </body>
     </html>
