@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { Spotlight } from "@/components/ui/Spotlight";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,8 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={inter.className} >
-
-        <div className="relative w-full flex items-center justify-center border border-white">
+      <Spotlight/>
+        <div className="relative w-full flex items-center justify-center ">
           <Navbar/>
         </div>
 
