@@ -11,7 +11,16 @@ function page() {
     <div className="min-h-screen py-12 pt-36">
         <h1 className="text-center text-2xl md:text-5xl font-bold sm:text-4xl">All courses ({courseData.courses.length})</h1>
         <div className="flex flex-wrap justify-center items-center gap-5 p-3">
-            {courseData?.courses.map((course)=>(
+            {courseData?.courses.map((course:{
+                id: number,
+                title: string,
+                slug: string,
+                description: string,
+                price: number,
+                instructor: string,
+                isFeatured: boolean,
+                image:string
+            })=>(
                 <div className="">
                 <CardContainer className="inter-var">
                 <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
