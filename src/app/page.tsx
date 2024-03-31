@@ -16,7 +16,7 @@ export default function Home() {
       <WhyChooseUs/>
       <TestimonialCards/>
       <UpcomingWebinar/>
-      <Instructors/>
+      {/* <Instructors/> */}
       <Footer/>
     </main>
   );
